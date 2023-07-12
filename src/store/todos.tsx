@@ -51,9 +51,7 @@ export function TodosProvider({ children }: { children: ReactNode }) {
 
   // toggleTodoAsCompleted
   const toggleTodoAsCompleted = (id: string) => {
-    // function toggleTodoAsCompleted(id:string) {
     setTodos((prev) => {
-      // console.log("completed "+ prev.map((val) => val ))
       const newTodos = prev.map((task) => {
         if (task.id === id) {
           return { ...task, completed: !task.completed };
